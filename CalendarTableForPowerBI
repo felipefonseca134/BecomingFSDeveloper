@@ -13,12 +13,12 @@ let CalendarTableFunction = (StartDate as date, EndDate as date, FiscalStartMont
     InsertDay = Table.AddColumn(InsertMonth, "Day", each Date.Day([Date])),
     
     InsertDayInt = Table.AddColumn(InsertDay, "DateNumber", each [Year] * 10000 + [MonthNumber] * 100 + [Day]),
-    InsertMonthName = Table.AddColumn(InsertDayInt, "Month", each Date.ToText([Date], "MMMM"), type text),
+    InsertMonthName = Table.AddColumn(InsertDayInt, "Month", each Date.ToText([Date], "MMMM", "en-US"), type text),
     InsertCalendarMonth = Table.AddColumn(InsertMonthName, "Month and Year", each (try Text.Range([Month], 0, 3) otherwise [Month]) & " " & Number.ToText([Year])),
     InsertCalendarQtr = Table.AddColumn(InsertCalendarMonth, "Quarter and Year", each "Q" & Number.ToText([QuarterNumber]) & " " & Number.ToText([Year])),
     
     InsertDayWeek = Table.AddColumn(InsertCalendarQtr, "DayOfWeek", each Date.DayOfWeek([Date])),
-    InsertDayName = Table.AddColumn(InsertDayWeek, "DayName", each Date.ToText([Date], "dddd"), type text),
+    InsertDayName = Table.AddColumn(InsertDayWeek, "DayName", each Date.ToText([Date], "dddd", "en-US"), type text),
     InsertWeekEnding = Table.AddColumn(InsertDayName, "WeekEnding", each Date.EndOfWeek([Date]), type date),
     InsertWeekNumber = Table.AddColumn(InsertWeekEnding, "WeekNumber", each Date.WeekOfYear([Date])),
     
