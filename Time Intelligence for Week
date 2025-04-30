@@ -1,2 +1,7 @@
 Ventas Semana Anterior = Calculate([Ventas]; 
 Filter(ALLSELECTED(Calendario[NumeroSemana]);  Calendario[NumeroSemana] = (SELECTEDVALUE(Calendario[NumeroSemana]) - 1 )))
+
+
+Ventas Semana Anterior del ano anterior = Calculate([Ventas]; 
+Filter(ALL(Calendario);  
+Calendario[NumeroSemana] = SELECTEDVALUE(Calendario[NumeroSemana]) && Calendario[ANO] = SELECTEDVALUE(Calendario[NumeroSemana])-1))
