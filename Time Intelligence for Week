@@ -8,3 +8,5 @@ Calendario[NumeroSemana] = SELECTEDVALUE(Calendario[NumeroSemana]) && Calendario
 
 Acumulado entre fechas = Calculate([Ventas]; 
 FILTER(ALLSELECTED(CALENDARIO[Fecha]); Calendario[Fecha] <= MAX(Calendario[Fecha]))
+
+Promedio Movil con Variables = 
