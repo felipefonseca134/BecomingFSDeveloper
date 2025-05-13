@@ -15,7 +15,6 @@ Machine Learning:
 * For tunning, you can use hyperparameters
 * Remember to evaluate your model
 * Remember the confusion matrix
-* 
 
 4) Steps Suggested:
   4.1. Problem Definition: What problem are we trying to solve?
@@ -24,5 +23,12 @@ Machine Learning:
   4.4. Features: What features should we model?
   4.5. Modeling: What kind of model should we use?
   4.6. Experiments: What have we tried / what else can we try?
+
+5) Mottos:
+  5.1. If in doubt, run the code
+  5.2. Experiment, experiment, experiment
+  5.3. Visualize, visualize, visualize
+  5.4. 
+  5.5. 
 
 
