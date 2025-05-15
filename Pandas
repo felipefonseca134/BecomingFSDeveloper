@@ -1,0 +1,2 @@
+1) Use "pd.Categorical" to convert numeric class to string class
+2) Use "pd.Crosstab" to made cross table
