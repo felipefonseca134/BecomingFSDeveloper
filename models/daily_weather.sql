@@ -1,3 +1,4 @@
+
 WITH daily_weather as (
 
 
